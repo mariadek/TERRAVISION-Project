@@ -212,13 +212,13 @@ if __name__ == "__main__":
 
 
     model_2x = DSen2Net_2x()
-    x2_path = os.path.join('Training', 'Model_2x_lr0.0001_bs64_epochs150_2025-05-08_23:07:52', 'DSEN2_2x_model.pth')
+    x2_path = os.path.join('Model_2x_lr0.0001_bs64_epochs150_2025-05-08_23:07:52', 'DSEN2_2x_model.pth')
     checkpoint = torch.load(x2_path, map_location=device, weights_only=True)
     model_2x.load_state_dict(checkpoint['model_state_dict'])
     model_2x.to(device)
 
     model_6x = DSen2Net_6x()
-    x6_path = os.path.join('Training', 'Model_6x_lr0.0001_bs64_epochs150_2025-05-08_10:54:34', 'DSEN2_x6_model.pth')
+    x6_path = os.path.join('Model_6x_lr0.0001_bs64_epochs150_2025-05-08_10:54:34', 'DSEN2_x6_model.pth')
     checkpoint = torch.load(x6_path, map_location=device, weights_only=True)
     model_6x.load_state_dict(checkpoint['model_state_dict'])
     model_6x.to(device)
